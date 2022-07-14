@@ -13,12 +13,6 @@ body {
   font-family: sans-serif;
 }
 
-header {
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.07), 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  color: #212529;
-  width: 100%;
-}
-
 nav {
   width: 100%;
   display: flex;
@@ -143,7 +137,8 @@ nav {
   justify-self: center;
 }
 
-.nav-account button {
+.nav-account button,
+main button {
   border-radius: 15px;
   padding: 0.9rem 1.5rem;
   margin: 0 5px;
@@ -153,11 +148,53 @@ nav {
   color: hsl(0, 0%, 41%);
 }
 
-.nav-account button:hover {
+.nav-account button:hover,
+main button:hover {
   color: hsl(0, 0%, 8%);
   border-color: hsl(0, 0%, 8%);
 }
 
 button.login {
   border: 0;
+}
+
+main {
+  display: grid;
+  padding: 1rem 3rem;
+  grid-template-columns: 50% 50%;
+}
+
+.left-main {
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  justify-content: space-between;
+}
+
+.left-main h1 {
+  font-size: 4rem;
+}
+
+.left-main button {
+  align-self: flex-start;
+  font-size: 1rem;
+}
+
+.left-main p {
+  color: hsl(0, 0%, 41%);
+  font-size: 1rem;
+}
+
+.right-main {
+  background: url("./images/image-hero-desktop.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
